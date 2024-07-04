@@ -13,7 +13,7 @@ POST http://localhost:3000/board
 content-type: application/json
 
 {
-    "name": "FastCampus",
+    "name": "F222",
     "contents": "contents 11"
 }
 
