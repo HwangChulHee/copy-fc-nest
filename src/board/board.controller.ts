@@ -35,7 +35,7 @@ export class BoardController {
   }
 
   @Put(':id')
-  update(@Param('id', ParseIntPipe) id: number, @Body() data) {
+  update(@Param('id', ParseIntPipe) id: number,@Body(new ValidationPipe()) data: CreateBoardDto) {
     return this.boardService.update(id, data);
   }
 
