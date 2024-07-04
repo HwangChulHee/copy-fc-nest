@@ -19,13 +19,15 @@ export class BoardController {
   }
 
   @Get(':id')
-  find(@Param('id') id: string) {
+  find(@Param('id') id: number) {
     return this.boardService.find(id);
   }
 
   @Post()
-  create(@Body() data) {
-    return 'create';
+  create(
+      @Body() data
+  ) {
+      return this.boardService.create(data);
   }
 
   @Put(':id')

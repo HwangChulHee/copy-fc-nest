@@ -7,3 +7,12 @@ GET http://localhost:3000/board
 GET http://localhost:3000/board/1
 
 ###
+
+# 게시글 작성하기
+POST http://localhost:3000/board
+content-type: application/json
+
+{
+    "name": "FastCampus",
+    "contents": "contents 11"
+}
