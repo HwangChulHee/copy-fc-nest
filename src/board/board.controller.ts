@@ -20,19 +20,17 @@ export class BoardController {
 
   @Get(':id')
   find(@Param('id') id: number) {
-    return this.boardService.find(id);
+    return this.boardService.find(Number(id));
   }
 
   @Post()
-  create(
-      @Body() data
-  ) {
-      return this.boardService.create(data);
+  create(@Body() data) {
+    return this.boardService.create(data);
   }
 
   @Put(':id')
   update(@Param('id') id: number, @Body() data) {
-    return 'update';
+    return this.boardService.update(Number(id), data);
   }
 
   @Delete(':id')
