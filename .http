@@ -20,11 +20,11 @@ content-type: application/json
 ###
 
 # 게시글 수정
-PUT http://localhost:3000/board/11
+PUT http://localhost:3000/board/4
 content-type: application/json
 
 {
-    "name": "FastCampus New"
+    "contents": "FastCampus New"
 }
 
 ###
