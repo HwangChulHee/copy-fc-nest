@@ -74,14 +74,7 @@ export class BoardService {
   }
 
   async find(id: number) {
-    const board = await this.boardRepository.findOne({
-      where: {
-        id,
-      },
-      relations: {
-        user: true,
-      },
-    });
+    const board = await this.getBoardById(id);
 
     if (!board) throw new HttpException('NotFound', HttpStatus.NOT_FOUND);
 
@@ -108,23 +101,17 @@ export class BoardService {
     })
   }
 
-  delete(id: number) {
-    const index = this.getBoardId(id);
+  async delete(id: number) {
+    const board = await this.getBoardById(id);
 
-    if (index > -1) {
-      const deleteBoard = this.boards[index];
-      this.boards.splice(index, 1);
-      return deleteBoard;
-    }
+    if (!board) throw new HttpException('NOT_FOUND', HttpStatus.NOT_FOUND);
 
-    return null;
+    return this.boardRepository.remove(board);
   }
 
-  getBoardId(id: number) {
-    return this.boards.findIndex((board) => board.id === id);
-  }
-
-  getNextId() {
-    return this.boards.sort((a, b) => b.id - a.id)[0].id + 1;
+  async getBoardById(id: number) {
+    return this.boardRepository.findOneBy({
+      id,
+    });
   }
 }
