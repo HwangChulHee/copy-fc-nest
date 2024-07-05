@@ -72,4 +72,10 @@ export class UserService {
     const DEFAULT_SALT = 11;
     return hash(password, DEFAULT_SALT);
   }
+
+  async getUserByUsername(username: string) {
+    return this.userRepository.findOneBy({
+      username,
+    });
+  }
 }
