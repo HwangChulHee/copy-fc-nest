@@ -7,5 +7,5 @@ export class UpdateBoardDto {
     required: true,
     example: '안녕하세요',
   })
-  contents?: string;
+  contents: string;
 }

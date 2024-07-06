@@ -4,24 +4,24 @@ GET http://localhost:3000/board
 ###
 
 # 게시글 하나 가져오기
-GET http://localhost:3000/board/1
+GET http://localhost:3000/board/4
 
 ###
 
 # 게시글 작성하기
 POST http://localhost:3000/board
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJmYXN0Y2FtcHVzMjAyNCIsIm5hbWUiOiJmYXN0Y2FtcHVzbmFtZTIiLCJpYXQiOjE3MjAyNTQ1NTIsImV4cCI6MTcyMDI1ODE1Mn0.ya3N0cOgihnx0k7MVJKENDDXAgxj6aSmbunrvIOvZg8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJmYXN0Y2FtcHVzMjAyNCIsIm5hbWUiOiJmYXN0Y2FtcHVzbmFtZTIiLCJpYXQiOjE3MjAyNTg4NzMsImV4cCI6MTcyMDI2MjQ3M30.A1HCwdr9kMJRbLyZ8PGRWt1WiANAO-0wr7NqVpvPOhA
 
 {
-    "contents": "new contents 11"
+    "contents": "new contents 1"
 }
 
 ###
 
 # 게시글 수정
-PUT http://localhost:3000/board/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJmYXN0Y2FtcHVzMjAyNCIsIm5hbWUiOiJmYXN0Y2FtcHVzbmFtZTIiLCJpYXQiOjE3MjAyNTQ1NTIsImV4cCI6MTcyMDI1ODE1Mn0.ya3N0cOgihnx0k7MVJKENDDXAgxj6aSmbunrvIOvZg8
+PUT http://localhost:3000/board/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJmYXN0Y2FtcHVzMjAyNCIsIm5hbWUiOiJmYXN0Y2FtcHVzbmFtZTIiLCJpYXQiOjE3MjAyNTg4NzMsImV4cCI6MTcyMDI2MjQ3M30.A1HCwdr9kMJRbLyZ8PGRWt1WiANAO-0wr7NqVpvPOhA
 
 {
     "contents": "FastCampus New"
@@ -31,8 +31,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hb
 
 # 게시글 삭제
 
-DELETE http://localhost:3000/board/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJmYXN0Y2FtcHVzMjAyNCIsIm5hbWUiOiJmYXN0Y2FtcHVzbmFtZTIiLCJpYXQiOjE3MjAyNTQ1NTIsImV4cCI6MTcyMDI1ODE1Mn0.ya3N0cOgihnx0k7MVJKENDDXAgxj6aSmbunrvIOvZg8
+DELETE http://localhost:3000/board/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJmYXN0Y2FtcHVzMjAyNCIsIm5hbWUiOiJmYXN0Y2FtcHVzbmFtZTIiLCJpYXQiOjE3MjAyNTgzOTUsImV4cCI6MTcyMDI2MTk5NX0.QHlFV_nljk1zcoSlF9ghtBMS-FyFluvMTpC1LqLpLDI
 
 ###
 GET http://localhost:3000
