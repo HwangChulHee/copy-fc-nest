@@ -42,6 +42,7 @@ export class UserService {
       throw new HttpException('UNAUTHORIZED', HttpStatus.UNAUTHORIZED);
 
     const payload = {
+      id: user.id,
       username,
       name: user.name,
     };
